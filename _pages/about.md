@@ -7,7 +7,7 @@ redirect_from:
   - /about.html
 ---
 
-Hi there! I am a final-year master's student at Tongji University with a research focus on Time-Series Analysis, Graph Neural Networks, Foundation Models, and Large-Language Models. I am currently seeking a CS Ph.D. position for the Spring/Fall 2025 intake and hope to successfully apply for it.
+Hi there! I am a final-year master student at Tongji University with a research focus on Time-Series Analysis, Graph Neural Networks, Foundation Models, and Large-Language Models. I am currently seeking a CS Ph.D. position for the Spring/Fall 2025 intake and hope to successfully apply for it.
 
 ## Research Experience
 1. **Emory University**, Research Assistant, Jun. 2024 - Present  
