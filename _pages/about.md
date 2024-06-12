@@ -11,14 +11,14 @@ Hi there! I am a final-year master's student at Tongji University with a researc
 
 Research Experience
 ======
-1. Emory University, Research Assistant, Jun.2024 - Present
-Advisor: Dr. [Carl Yang](https://www.cs.emory.edu/~jyang71/)
+1. Emory University, Research Assistant, Jun.2024 - Present \\
+Advisor: Dr. [Carl Yang](https://www.cs.emory.edu/~jyang71/) \\
 Research Topic: Clinical Time-Series Foundation Model
-1. New York University Shanghai, Research Assistant, Sep.2023 - Jun.2024
-Advisor: Dr. [Qiaoyu (Steven) Tan](https://qiaoyu-tan.github.io)
+1. New York University Shanghai, Research Assistant, Sep.2023 - Jun.2024 \\
+Advisor: Dr. [Qiaoyu (Steven) Tan](https://qiaoyu-tan.github.io) \\
 Research Topic: Graph Foundation Model
-1. Rice University, Summer Research Intern, May.2023 - Sep.2023
-Advisor: Dr. [Xia (Ben) Hu](https://cs.rice.edu/~xh37/), Ph.D. [Jiayi Yuan](https://jy-yuan.github.io)
+1. Rice University, Summer Research Intern, May.2023 - Sep.2023 \\
+Advisor: Dr. [Xia (Ben) Hu](https://cs.rice.edu/~xh37/), Ph.D. [Jiayi Yuan](https://jy-yuan.github.io) \\
 Research Topic: Large Time-Series Model
 
 Education

@@ -21,12 +21,12 @@ repository               : "academicpages/academicpages.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "personalfigure.png"
-  name             : "Your Sidebar Name"
+  avatar           : "images/personalfigure.png"
+  name             : "Yuhao Xu"
   pronouns         : # example: "she/her"  
   bio              : "Short biography for the left-hand sidebar"
-  location         : "Earth"
-  employer         : "Red Brick University"
+  location         : "Shanghai, China"
+  employer         : "Tongji University"
   uri              : # URL
   email            : "yuhaoxu99@outlook.com" 
 
