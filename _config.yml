@@ -20,7 +20,7 @@ baseurl                  : "" # the subpath of your site, e.g. "/blog"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "images/personalfigure.png"
+  avatar           : "personalfigure.jpg"
   name             : "Yuhao Xu"
   pronouns         : # example: "she/her"  
   bio              : "Master in Tongji University"
