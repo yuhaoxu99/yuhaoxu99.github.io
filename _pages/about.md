@@ -24,6 +24,6 @@ Research Experience
 Education
 ======
 1. **Tongji University**, 2021 - 2024
-M.E. in Automation, Advisor: Dr. [Jianfeng Lu](https://see.tongji.edu.cn/info/1386/10471.htm)
+**M.E.** in Automation, Advisor: Dr. [Jianfeng Lu](https://see.tongji.edu.cn/info/1386/10471.htm)
 1. **Jiaxing University**, 2017 - 2021
-B.E. in Automation
+**B.E.** in Automation
