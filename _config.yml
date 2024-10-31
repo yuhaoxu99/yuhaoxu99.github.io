@@ -7,11 +7,11 @@
 # server process.
 
 # Basic Site Settings
-locale                   : "Shanghai, China"
+locale                   : "Atlanta, GA"
 title                    : "Yuhao Xu / Mr"
 title_separator          : "-"
 name                     : &name "Yuhao Xu"
-description              : &description "Master in Tongji University"
+description              : &description "Visiting Scholar in Emory University"
 url                      : https://yuhaoxu99.github.io/ # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 
@@ -23,11 +23,11 @@ author:
   avatar           : "personalfigure.jpg"
   name             : "Yuhao Xu"
   pronouns         : # example: "she/her"  
-  bio              : "Master in Tongji University"
-  location         : "Shanghai, China"
-  employer         : "Tongji University"
+  bio              : "Visiting Scholar at Emory University"
+  location         : "Atlanta, GA"
+  employer         : "Emory University"
   uri              : # URL
-  email            : "yuhaoxu99@outlook.com" 
+  email            : "yxu81@emory.edu" 
 
   # Academic websites
   arxiv            : # URL - Update with the correct link to your profile
