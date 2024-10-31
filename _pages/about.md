@@ -7,10 +7,10 @@ redirect_from:
   - /about.html
 ---
 
-Hi there! I am a final-year master student at Tongji University with a research focus on Time-Series Analysis, Graph Neural Networks, Foundation Models, and Large-Language Models. I am currently seeking a CS Ph.D. position for the Spring/Fall 2025 intake and hope to successfully apply for it.
+Hi there! I am a visiting scholar at Emory University with a research focus on Time-Series Analysis, Graph Neural Networks, Foundation Models, and Large-Language Models. I am currently seeking a CS Ph.D. position for the Spring/Fall 2025 intake and hope to successfully apply for it.
 
 ## Research Experience
-1. **Emory University**, Research Assistant, Jun. 2024 - Present  
+1. **Emory University**, Visiting Scholar, Jun. 2024 - Present  
    **Advisor:** Dr. [Carl Yang](https://www.cs.emory.edu/~jyang71/)  
    **Research Topic:** Clinical Time-Series Foundation Model
 
@@ -24,6 +24,5 @@ Hi there! I am a final-year master student at Tongji University with a research 
 
 ## Education
 1. **Tongji University**, 2021 - 2024, M.E. in Automation  
-   **Advisor:** Dr. [Jianfeng Lu](https://see.tongji.edu.cn/info/1386/10471.htm)
 
 2. **Jiaxing University**, 2017 - 2021, B.E. in Automation
