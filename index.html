@@ -26,7 +26,8 @@
       position:relative;
       padding:64px 24px 32px;
       border-bottom:6px solid var(--dark);
-      background: #fff; /* Changed to white to blend with JPG images */
+      background: url('photo/header_bg.jpg') no-repeat center center;
+      background-size: cover;
       color: #000;
       overflow: hidden; /* For floating elements */
     }
@@ -93,60 +94,155 @@
     }
     @keyframes spin { 100% { transform: rotate(360deg); } }
 
+    /* Hanging Balls Navigation */
+    .hanging-balls-container {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100%;
+      max-width: 900px; /* Increased max-width for bigger balls */
+      height: 140px; /* Increased height */
+      display: flex;
+      justify-content: space-around;
+      align-items: flex-start;
+      z-index: 10;
+      pointer-events: none; /* Allow clicks to pass through container */
+    }
+
+    .hanging-ball-wrapper {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      cursor: pointer;
+      pointer-events: auto; /* Re-enable clicks */
+      text-decoration: none;
+      transition: transform 0.3s ease;
+    }
+
+    .hanging-ball-wrapper:hover {
+      transform: translateY(5px);
+    }
+
+    .string {
+      width: 2px;
+      background: #000;
+      height: 40px; /* Base length */
+    }
+    
+    /* Varying string lengths */
+    .hanging-ball-wrapper:nth-child(1) .string { height: 30px; }
+    .hanging-ball-wrapper:nth-child(2) .string { height: 50px; }
+    .hanging-ball-wrapper:nth-child(3) .string { height: 40px; }
+    .hanging-ball-wrapper:nth-child(4) .string { height: 55px; }
+    .hanging-ball-wrapper:nth-child(5) .string { height: 35px; }
+
+    .ball {
+      width: 70px; /* Increased from 50px */
+      height: 70px; /* Increased from 50px */
+      border-radius: 50%;
+      border: 3px solid #000;
+      overflow: hidden;
+      background: #000;
+      position: relative;
+      box-shadow: 2px 2px 0 rgba(0,0,0,0.2);
+    }
+
+    .ball video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 1; /* Always fully visible */
+      transition: opacity 0.3s;
+    }
+
+    .hanging-ball-wrapper:hover .ball video {
+      opacity: 1;
+    }
+    
+    /* Nav label on hover (optional enhancement) */
+    .ball-label {
+      position: absolute;
+      bottom: -25px;
+      font-size: 14px; /* Increased font size */
+      font-weight: 700;
+      color: #000;
+      opacity: 0;
+      transition: opacity 0.3s;
+      background: #fff;
+      padding: 2px 6px;
+      border-radius: 4px;
+      border: 1px solid #000;
+    }
+    .hanging-ball-wrapper:hover .ball-label {
+      opacity: 1;
+    }
+    
+    .title{
+      font-weight:800;
+      font-size:40px;
+      letter-spacing:.5px;
+      margin:0 0 8px 0; /* Add bottom margin */
+      color:#000;
+      text-shadow: none;
+    }
+    .subtitle{
+      font-family:"Patrick Hand",cursive;
+      color:#222;
+      font-size:22px;
+      margin-top:0;
+    }
+    
+    /* Header content adjustment */
     .header-content {
       position: relative;
       z-index: 1;
       display: flex;
-      align-items: center;
-      gap: 32px;
-      flex-wrap: wrap;
+      flex-direction: column; /* Changed to column for centering */
+      align-items: center;    /* Center horizontally */
+      justify-content: center; /* Center vertically */
+      gap: 24px;
+      margin-top: 120px; /* Increased space for bigger hanging balls */
+      text-align: center; /* Center text */
     }
 
     .avatar-container {
       flex-shrink: 0;
     }
     .avatar {
-      width: 140px;
-      height: 140px;
+      width: 160px; /* Slightly larger avatar */
+      height: 160px;
       border-radius: 50%;
-      border: 4px solid #000; /* Changed border to black */
+      border: 4px solid #000;
       background: #eee;
       object-fit: cover;
       box-shadow: 4px 4px 0 var(--blue);
     }
     .header-text {
       flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
-
-    .brand-row{display:flex;gap:12px;align-items:center;margin-bottom:18px;flex-wrap:wrap}
-    .dot{width:48px;height:48px;border-radius:50%;display:grid;place-items:center;border:3px solid #000;box-shadow:3px 3px 0 #000} /* Reverted to black borders */
-    .dot span{width:20px;height:6px;border-radius:8px;background:#000}
-    .dot.eye{display:flex;gap:5px;justify-content:center;align-items:center;}
-    .dot.eye::before,.dot.eye::after{content:"";width:6px;height:6px;background:#000;border-radius:50%}
-    .dot.glasses{position:relative}
-    .dot.glasses::before,.dot.glasses::after{
-      content:"";position:absolute;top:13px;width:14px;height:14px;border:2px solid #ffda2d;border-radius:4px
-    }
-    .dot.glasses::before{left:11px}
-    .dot.glasses::after{right:11px}
     
-    .title{
-      font-weight:800;font-size:40px;letter-spacing:.5px;margin:0;color:#000; /* Reverted to black */
-      text-shadow: none;
+    nav{
+      margin-top:24px;
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
+      justify-content: center; /* Center nav items */
     }
-    .subtitle{font-family:"Patrick Hand",cursive;color:#222;font-size:22px;margin-top:6px}
-    
-    nav{margin-top:24px;display:flex;flex-wrap:wrap;gap:12px}
     nav a{padding:10px 14px;background:#fff;border:3px solid #000;border-radius:10px;box-shadow:4px 4px 0 #000;font-weight:600;color: #000;}
-    nav a:nth-child(1){background:var(--yellow)}
-    nav a:nth-child(2){background:var(--red)}
+    nav a:nth-child(1){background:var(--red)}
+    nav a:nth-child(2){background:var(--yellow)}
     nav a:nth-child(3){background:var(--pink)}
     nav a:nth-child(4){background:var(--blue)}
     nav a:nth-child(5){background:var(--green)}
     
     section{padding:28px 24px;border-bottom:1px dashed #ccc}
     h2{font-size:26px;margin:0 0 14px;font-weight:800;display:flex;align-items:center;gap:8px}
-    h2 .tag{display:inline-block;padding:6px 10px;border:3px solid #000;border-radius:12px;box-shadow:3px 3px 0 #000;background:var(--yellow);font-size: 0.8em;}
+    h2 .tag{display:inline-block;padding:6px 10px;border:3px solid #000;border-radius:12px;box-shadow:3px 3px 0 #000;background:var(--red);font-size: 0.8em;}
     .grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
     .card{padding:16px;border:3px solid #000;border-radius:14px;box-shadow:4px 4px 0 #000;background:#fff}
     .list{margin:0;padding-left:18px}
@@ -174,24 +270,55 @@
 <body>
   <header>
     <!-- Background Elements (User Uploaded) -->
-    <!-- Please save your images with these filenames in the project folder -->
+    <!-- Removed as per request -->
     
-    <!-- Banana -->
-    <img src="photo/banana.jpg" class="bg-icon" alt="Banana">
-    <!-- Lemon -->
-    <img src="photo/lemon.jpg" class="bg-icon" alt="Lemon">
-    <!-- Orange -->
-    <img src="photo/mojocarrot.jpg" class="bg-icon" alt="mojocarrot">
-    <!-- Apple -->
-    <img src="photo/apple.jpg" class="bg-icon" alt="Apple">
-    <!-- Pea Pod -->
-    <img src="photo/peapod.jpg" class="bg-icon" alt="Pea Pod">
-    <!-- Drink -->
-    <img src="photo/drink.jpg" class="bg-icon" alt="Drink">
-    <!-- Strawberry -->
-    <img src="photo/strawberry.jpg" class="bg-icon" alt="Strawberry">
-    <!-- Rose -->
-    <img src="photo/rose.jpg" class="bg-icon" alt="Rose">
+    <!-- Hanging Balls (Videos) -->
+    <div class="hanging-balls-container">
+      <!-- Ball 1: About -->
+      <a href="#about" class="hanging-ball-wrapper">
+        <div class="string"></div>
+        <div class="ball">
+          <video src="video/monster.mp4" autoplay loop muted playsinline></video>
+        </div>
+        <div class="ball-label">Monster: About</div>
+      </a>
+      
+      <!-- Ball 2: Education -->
+      <a href="#education" class="hanging-ball-wrapper">
+        <div class="string"></div>
+        <div class="ball">
+          <video src="video/masa.mp4" autoplay loop muted playsinline></video>
+        </div>
+        <div class="ball-label">Masa: Education</div>
+      </a>
+
+      <!-- Ball 3: News -->
+      <a href="#news" class="hanging-ball-wrapper">
+        <div class="string"></div>
+        <div class="ball">
+          <video src="video/ashin.mp4" autoplay loop muted playsinline></video>
+        </div>
+        <div class="ball-label">Ashin: News</div>
+      </a>
+
+      <!-- Ball 4: Publications -->
+      <a href="#publications" class="hanging-ball-wrapper">
+        <div class="string"></div>
+        <div class="ball">
+          <video src="video/ming.mp4" autoplay loop muted playsinline></video>
+        </div>
+        <div class="ball-label">Ming: Publications</div>
+      </a>
+
+      <!-- Ball 5: Teaching (or Contact) -->
+      <a href="#contact" class="hanging-ball-wrapper">
+        <div class="string"></div>
+        <div class="ball">
+          <video src="video/stone.mp4" autoplay loop muted playsinline></video>
+        </div>
+        <div class="ball-label">Stone: Contact</div>
+      </a>
+    </div>
 
     <div class="container header-content">
       <div class="avatar-container">
@@ -200,22 +327,8 @@
       </div>
       
       <div class="header-text">
-        <div class="brand-row" aria-label="Mayday-inspired dots">
-          <div class="dot" style="background:var(--yellow)"><span></span></div>
-          <div class="dot eye" style="background:var(--red)"></div>
-          <div class="dot" style="background:var(--pink)"><span></span></div>
-          <div class="dot glasses" style="background:var(--blue)"></div>
-          <div class="dot eye" style="background:var(--green)"></div>
-        </div>
         <h1 class="title">Yuhao Xu</h1>
         <div class="subtitle">Visiting Scholar at Emory University</div>
-        <nav aria-label="Main Navigation">
-          <a href="#about">About</a>
-          <a href="#education">Education</a>
-          <a href="#news">News</a>
-          <a href="#publications">Publications</a>
-          <a href="#contact">Contact</a>
-        </nav>
       </div>
     </div>
   </header>
@@ -241,7 +354,7 @@
     </section>
 
     <section id="education">
-      <h2><span class="tag" style="background:var(--red)">Education</span> Education</h2>
+      <h2><span class="tag" style="background:var(--yellow)">Education</span> Education</h2>
       <ul class="list">
         <li>[M.E., Tongji University], [2021 - 2024]</li>
         <li>[B.E., Jiaxing University], [2017 - 2021]</li>
