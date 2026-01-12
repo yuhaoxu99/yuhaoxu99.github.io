@@ -444,10 +444,8 @@
     <div class="music-icon">🎵</div>
     <span id="musicText">Play Music</span>
   </div>
-  <audio id="bgm" loop>
-    <source src="music/hanren.mp3" type="audio/mpeg">
-    Your browser does not support the audio element.
-  </audio>
+
+  <audio id="bgm"></audio>
 
   <script>
     document.getElementById('y').textContent = new Date().getFullYear();
@@ -456,24 +454,56 @@
     const musicControl = document.getElementById('musicControl');
     const musicText = document.getElementById('musicText');
 
+    /* ====== 1. 音乐列表 ====== */
+    const playlist = [
+      { src: "music/hanren.mp3", title: "憨人" },
+      { src: "music/oaoa.mp3", title: "OAOA" },
+      { src: "music/chengwang.mp3", title: "成名在望" },
+      { src: "music/haohao.mp3", title: "好好" },
+      { src: "music/renyimen.mp3", title: "任意门" },
+      { src: "music/wangu.mp3", title: "顽固" },
+      { src: "music/xiangyu.mp3", title: "相遇" },
+      { src: "music/yonggan.mp3", title: "勇敢" },
+      { src: "music/zhuanyan.mp3", title: "转眼" },
+    ];
+
+    let currentIndex = -1;
+
+    /* ====== 2. 随机选一首 ====== */
+    function pickRandomTrack() {
+    let next;
+    do {
+      next = Math.floor(Math.random() * playlist.length);
+    } while (next === currentIndex && playlist.length > 1);
+
+    currentIndex = next;
+    audio.src = playlist[currentIndex].src;
+    audio.load();
+
+    // 🎵 显示歌名
+    musicText.textContent = playlist[currentIndex].title;
+    }
+
+    /* ====== 3. 播放 / 暂停 ====== */
     function toggleMusic() {
       if (audio.paused) {
+        if (!audio.src) pickRandomTrack();
         audio.play();
         musicControl.classList.add('playing');
-        musicText.textContent = "Playing...";
+        musicText.textContent = playlist[currentIndex].title;
       } else {
         audio.pause();
         musicControl.classList.remove('playing');
-        musicText.textContent = "Play Music";
+        musicText.textContent = playlist[currentIndex]?.title || "Play Music";
       }
     }
-    
-    // Try auto-play on load (might be blocked by browser)
-    window.addEventListener('click', function() {
-       if (audio.paused) {
-         // audio.play(); // Optional: Auto play on first click anywhere
-       }
-    }, { once: true });
+
+
+    /* ====== 4. 播完自动随机下一首（推荐） ====== */
+    audio.addEventListener("ended", () => {
+      pickRandomTrack();
+      audio.play();
+    });
   </script>
 </body>
 </html>
